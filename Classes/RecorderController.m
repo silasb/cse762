@@ -61,6 +61,7 @@
   // prepare to record
   [_recorder setDelegate:self];
   [_recorder prepareToRecord];
+  _recorder.meteringEnabled = YES;
 	
 }
 
@@ -84,6 +85,11 @@
   [_recordButton setImage:[UIImage imageNamed:@"pause_button.png"] forState: UIControlStateNormal];
 
   [_recorder record];
+}
+
+- (void)dealloc {
+  [_recorder release];
+  [super dealloc];
 }
 
 @end
