@@ -12,6 +12,11 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		1E43D5051176573E00183773 /* mic.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E43D5041176573E00183773 /* mic.png */; };
+		1ECBD4B9117B616500E1B2E8 /* record_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ECBD4B8117B616500E1B2E8 /* record_button.png */; };
+		1ECBD4DE117B65C700E1B2E8 /* pause_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ECBD4DD117B65C700E1B2E8 /* pause_button.png */; };
+		1ECBD52D117B85EA00E1B2E8 /* RecorderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECBD52C117B85EA00E1B2E8 /* RecorderController.m */; };
+		1ECBD5AC117BBA4B00E1B2E8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECBD5AB117BBA4B00E1B2E8 /* AVFoundation.framework */; };
+		1ECBD622117BC08200E1B2E8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECBD621117BC08200E1B2E8 /* AudioToolbox.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2899E5220DE3E06400AC0155 /* RecorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* RecorderViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
@@ -24,7 +29,13 @@
 		1D3623250D0F684500981E51 /* RecorderAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Recorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		1E43D5041176573E00183773 /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mic.png; sourceTree = "<group>"; };
+		1E43D5041176573E00183773 /* mic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mic.png; path = resources/mic.png; sourceTree = "<group>"; };
+		1ECBD4B8117B616500E1B2E8 /* record_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = record_button.png; path = resources/record_button.png; sourceTree = "<group>"; };
+		1ECBD4DD117B65C700E1B2E8 /* pause_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause_button.png; path = resources/pause_button.png; sourceTree = "<group>"; };
+		1ECBD52B117B85EA00E1B2E8 /* RecorderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderController.h; sourceTree = "<group>"; };
+		1ECBD52C117B85EA00E1B2E8 /* RecorderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderController.m; sourceTree = "<group>"; };
+		1ECBD5AB117BBA4B00E1B2E8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1ECBD621117BC08200E1B2E8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* RecorderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecorderViewController.xib; sourceTree = "<group>"; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -43,6 +54,8 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				1ECBD5AC117BBA4B00E1B2E8 /* AVFoundation.framework in Frameworks */,
+				1ECBD622117BC08200E1B2E8 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +69,8 @@
 				1D3623250D0F684500981E51 /* RecorderAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* RecorderViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* RecorderViewController.m */,
+				1ECBD52B117B85EA00E1B2E8 /* RecorderController.h */,
+				1ECBD52C117B85EA00E1B2E8 /* RecorderController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -92,6 +107,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1ECBD4DD117B65C700E1B2E8 /* pause_button.png */,
+				1ECBD4B8117B616500E1B2E8 /* record_button.png */,
 				1E43D5041176573E00183773 /* mic.png */,
 				2899E5210DE3E06400AC0155 /* RecorderViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -106,6 +123,8 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				1ECBD5AB117BBA4B00E1B2E8 /* AVFoundation.framework */,
+				1ECBD621117BC08200E1B2E8 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,6 +174,8 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* RecorderViewController.xib in Resources */,
 				1E43D5051176573E00183773 /* mic.png in Resources */,
+				1ECBD4B9117B616500E1B2E8 /* record_button.png in Resources */,
+				1ECBD4DE117B65C700E1B2E8 /* pause_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +189,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* RecorderAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* RecorderViewController.m in Sources */,
+				1ECBD52D117B85EA00E1B2E8 /* RecorderController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,12 +227,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphonesimulator3.1.3;
 			};
 			name = Debug;
 		};
@@ -218,7 +240,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

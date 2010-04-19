@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecorderViewController : UIViewController {
+@class RecorderController;
 
+@interface RecorderViewController : UIViewController {
+	IBOutlet RecorderController *controller;
 }
 
 @end
