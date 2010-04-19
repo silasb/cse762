@@ -10,11 +10,13 @@
 
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import "RecorderAppDelegate.h"
 
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 
 @implementation RecorderController
 
+@synthesize label;
 @synthesize _recordButton;
 @synthesize _recorder;
 
@@ -65,6 +67,22 @@
 - (IBAction)recordButtonPressed:(UIButton *)sender {
   NSLog(@"Record button pressed");
   
+  [label setText:@"Recording"];
+  [label setBackgroundColor:[UIColor colorWithRed:0.4 green:0.0 blue:0.0 alpha:1.0]];
+
+  UIApplication *application = [UIApplication sharedApplication];
+
+  // set transparent
+  [application setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
+
+  RecorderAppDelegate *appDelegate = (RecorderAppDelegate *)[application delegate];
+
+  // then set to red
+  [[appDelegate window] setBackgroundColor: [UIColor redColor]];
+
+  // set the button to the pause button
+  [_recordButton setImage:[UIImage imageNamed:@"pause_button.png"] forState: UIControlStateNormal];
+
   [_recorder record];
 }
 

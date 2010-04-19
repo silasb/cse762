@@ -11,7 +11,7 @@
 @class RecorderController;
 
 @interface RecorderViewController : UIViewController {
-	IBOutlet RecorderController *controller;
+  IBOutlet RecorderController *controller;
 }
 
 @end

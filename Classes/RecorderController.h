@@ -10,13 +10,15 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface RecorderController : NSObject <AVAudioRecorderDelegate> {
-	IBOutlet UIButton					*_recordButton;
-	AVAudioRecorder						*_recorder;
+  IBOutlet UILabel          *label;
+  IBOutlet UIButton         *_recordButton;
+  AVAudioRecorder           *_recorder;
 }
 
 - (IBAction)recordButtonPressed:(UIButton *)sender;
 
-@property (nonatomic, retain) UIButton*			_recordButton;
+@property (nonatomic, retain) UILabel*          label;
+@property (nonatomic, retain) UIButton*         _recordButton;
 
-@property (nonatomic, assign)	AVAudioRecorder*	_recorder;
+@property (nonatomic, assign) AVAudioRecorder*  _recorder;
 @end
